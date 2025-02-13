@@ -6,9 +6,7 @@
         <!-- Panel 1 -->
         <div class="w-full h-[80vh] flex-shrink-0 flex flex-col items-center justify-center text-black">
             {% for activity in page.activities %}
-                <div class="p-4 text-black">
-                    {{ activity.label }}
-                </div>
+                <p class="font-mono">{{ activity | formatActivity(50) }}</p>
             {% endfor %}
         </div>
         <!-- Panel 2 -->
