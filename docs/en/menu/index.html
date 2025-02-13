@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+        rel="stylesheet" href="/assets/styles/tailwind.css">
+        
+        <title></title>
+    </head>
+    <body class="min-h-screen flex flex-col font-sans text-black">
+        <header class="h-[10vh] flex justify-between items-center border-b-2 border-black p-4">
+            <div>
+                <div>
+                    <a href="/" class="text-4xl font-bold"></a>
+                </div>
+                <div class="text-2m font-bold"></div>
+            </div>
+            <div class="relative">
+    <button
+        id="language-switcher"
+        class="px-4 py-2 bg-black text-white rounded-100 uppercase focus:outline-none"
+        aria-haspopup="true"
+        aria-expanded="false">
+        en
+    </button>
+    <div
+        id="language-dropdown"
+        class="absolute hidden right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg"
+        aria-labelledby="language-switcher">
+        <ul class="text-gray-800">
+            
+        </ul>
+    </div>
+</div>
+<script>
+    const userLanguage = localStorage.getItem('language') || 'fr';
+    document.documentElement.lang = userLanguage;
+    const switcherButton = document.getElementById('language-switcher');
+    const dropdownMenu = document.getElementById('language-dropdown');
+    switcherButton.addEventListener('click', () => {
+        const isDropdownVisible = dropdownMenu.classList.contains('hidden');
+        dropdownMenu.classList.toggle('hidden', ! isDropdownVisible);
+        switcherButton.setAttribute('aria-expanded', ! isDropdownVisible);
+    });
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('#language-switcher') && !event.target.closest('#language-dropdown')) {
+            dropdownMenu.classList.add('hidden');
+            switcherButton.setAttribute('aria-expanded', 'false');
+        }
+    });
+</script>
+        </header>
+        <main class="flex-1 w-full flex flex-col justify-center p-4">
+            
+
+    <div class="p-4 border border-gray-300 rounded-lg">
+        
+    </div>
+
+    <div class="p-4 border border-gray-300 rounded-lg">
+        
+    </div>
+
+        </main>
+        <footer class="h-[10vh] flex justify-center items-center p-4 mt-auto">
+            <p>&copy; 2025 Las Castagnères</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+[
+    {
+        "path": "/index.html",
+        "template": "_home_page_content.njk"
+    },
+    {
+        "path": "/menu/index.html",
+        "template": "_menu_page_content.njk"
+    }
+]

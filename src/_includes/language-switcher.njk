@@ -1,0 +1,40 @@
+<div class="relative">
+    <button
+        id="language-switcher"
+        class="px-4 py-2 bg-black text-white rounded-100 uppercase focus:outline-none"
+        aria-haspopup="true"
+        aria-expanded="false">
+        {{ page.language }}
+    </button>
+    <div
+        id="language-dropdown"
+        class="absolute hidden right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg"
+        aria-labelledby="language-switcher">
+        <ul class="text-gray-800">
+            {% for lang in collections.languages %}
+                <li>
+                    <a href="/{{ lang.code }}" class="block px-4 py-2 text-sm hover:bg-blue-100">
+                        {{ lang.label }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<script>
+    const userLanguage = localStorage.getItem('language') || 'fr';
+    document.documentElement.lang = userLanguage;
+    const switcherButton = document.getElementById('language-switcher');
+    const dropdownMenu = document.getElementById('language-dropdown');
+    switcherButton.addEventListener('click', () => {
+        const isDropdownVisible = dropdownMenu.classList.contains('hidden');
+        dropdownMenu.classList.toggle('hidden', ! isDropdownVisible);
+        switcherButton.setAttribute('aria-expanded', ! isDropdownVisible);
+    });
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('#language-switcher') && !event.target.closest('#language-dropdown')) {
+            dropdownMenu.classList.add('hidden');
+            switcherButton.setAttribute('aria-expanded', 'false');
+        }
+    });
+</script>

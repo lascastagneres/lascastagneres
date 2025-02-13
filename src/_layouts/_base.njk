@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ page.language }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+        rel="stylesheet" href="{{ '/assets/styles/tailwind.css' | url }}">
+        {# <link rel="stylesheet" href="{{ '/assets/styles/globals.css' | url }}"> #}
+        <title>{{ page.i18n['homepage.title'] }}</title>
+    </head>
+    <body class="min-h-screen flex flex-col font-sans text-black">
+        <header class="h-[10vh] flex justify-between items-center border-b-2 border-black p-4">
+            <div>
+                <div>
+                    <a href="/" class="text-4xl font-bold">{{ page.i18n['header.brand'] }}</a>
+                </div>
+                <div class="text-2m font-bold">{{ page.i18n['header.slogan'] }}</div>
+            </div>
+            {% include "language-switcher.njk" %}
+        </header>
+        <main class="flex-1 w-full flex flex-col justify-center p-4">
+            {{ content | safe }}
+        </main>
+        <footer class="h-[10vh] flex justify-center items-center p-4 mt-auto">
+            <p>&copy; 2025 Las Castagnères</p>
+        </footer>
+    </body>
+</html>
