@@ -48,5 +48,6 @@ module.exports = function (eleventyConfig) {
             includes: "_includes",
             layouts: "_layouts",
         },
+        pathPrefix: "/lascastagneres/"
     };
 };
