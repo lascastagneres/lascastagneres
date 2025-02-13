@@ -51,29 +51,81 @@
     });
 </script>
         </header>
-        <main class="flex-1 w-full flex flex-col justify-center p-4">
+        <main class="flex-grow w-full h-full flex flex-col justify-center">
             
-
-    <div class="p-4 border border-gray-300 rounded-lg">
-        Fabriquer mon kombucha (2h)
+<div
+    class="relative w-full h-full overflow-hidden">
+    <!-- Slider Container (100% width, no overflow issues) -->
+    <div
+        id="slider" class="flex flex-nowrap transition-transform duration-500 ease-in-out w-full h-full">
+        <!-- Panel 1 -->
+        <div class="w-full h-[80vh] flex-shrink-0 flex flex-col items-center justify-center text-black">
+            
+                <div class="p-4 text-black">
+                    Fabriquer mon kombucha (2h)
+                </div>
+            
+                <div class="p-4 text-black">
+                    Apprendre à jouer de l&#39;accordeon (1h)
+                </div>
+            
+                <div class="p-4 text-black">
+                    Faire une ballade en calèche (2h)
+                </div>
+            
+                <div class="p-4 text-black">
+                    Apprendre à dresser des chevaux (2h)
+                </div>
+            
+                <div class="p-4 text-black">
+                    Skier dans la station de Peyragudes (1j)
+                </div>
+            
+        </div>
+        <!-- Panel 2 -->
+        <div class="w-full h-[80vh] flex-shrink-0 flex items-center justify-center text-black">
+            Panel 2
+        </div>
+        <!-- Panel 3 -->
+        <div class="w-full h-[80vh] flex-shrink-0 flex items-center justify-center text-black">
+            Panel 3
+        </div>
     </div>
-
-    <div class="p-4 border border-gray-300 rounded-lg">
-        Apprendre à jouer de l&#39;accordeon (1h)
-    </div>
-
-    <div class="p-4 border border-gray-300 rounded-lg">
-        Faire une ballade en calèche (2h)
-    </div>
-
-    <div class="p-4 border border-gray-300 rounded-lg">
-        Apprendre à dresser des chevaux (2h)
-    </div>
-
-    <div class="p-4 border border-gray-300 rounded-lg">
-        Skier dans la station de Peyragudes (1j)
-    </div>
-
+    <!-- Left Arrow -->
+    <button
+        id="prev"
+        class="absolute top-1/2 left-4 transform -translate-y-1/2 w-16 h-16 bg-gray-700 text-white flex items-center
+            justify-center rounded-full shadow-lg hover:bg-gray-800">
+        ❮
+    </button>
+    <!-- Right Arrow -->
+    <button
+        id="next"
+        class="absolute top-1/2 right-4 transform -translate-y-1/2 w-16 h-16 bg-gray-700 text-white flex items-center
+            justify-center rounded-full shadow-lg hover:bg-gray-800">
+        ❯
+    </button>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.getElementById("slider");
+        const panels = slider.children.length;
+        let activePanel = 0;
+        document.getElementById("next").addEventListener("click", () => {
+            activePanel = (activePanel + 1) % panels;
+            updateSlider();
+        });
+        document.getElementById("prev").addEventListener("click", () => {
+            activePanel = (activePanel - 1 + panels) % panels;
+            updateSlider();
+        });
+        function updateSlider() {
+            slider.style.transform = `translateX(-${
+                activePanel * 100
+            }%)`;
+        }
+    });
+</script>
         </main>
         <footer class="h-[10vh] flex justify-center items-center p-4 mt-auto">
             <p>&copy; 2025 Las Castagnères</p>

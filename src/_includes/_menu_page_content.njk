@@ -1,5 +1,57 @@
-{% for activity in page.activities %}
-    <div class="p-4 border border-gray-300 rounded-lg">
-        {{ activity.label }}
+<div
+    class="relative w-full h-full overflow-hidden">
+    <!-- Slider Container (100% width, no overflow issues) -->
+    <div
+        id="slider" class="flex flex-nowrap transition-transform duration-500 ease-in-out w-full h-full">
+        <!-- Panel 1 -->
+        <div class="w-full h-[80vh] flex-shrink-0 flex flex-col items-center justify-center text-black">
+            {% for activity in page.activities %}
+                <div class="p-4 text-black">
+                    {{ activity.label }}
+                </div>
+            {% endfor %}
+        </div>
+        <!-- Panel 2 -->
+        <div class="w-full h-[80vh] flex-shrink-0 flex items-center justify-center text-black">
+            Panel 2
+        </div>
+        <!-- Panel 3 -->
+        <div class="w-full h-[80vh] flex-shrink-0 flex items-center justify-center text-black">
+            Panel 3
+        </div>
     </div>
-{% endfor %}
+    <!-- Left Arrow -->
+    <button
+        id="prev"
+        class="absolute top-1/2 left-4 transform -translate-y-1/2 w-16 h-16 bg-gray-700 text-white flex items-center
+            justify-center rounded-full shadow-lg hover:bg-gray-800">
+        ❮
+    </button>
+    <!-- Right Arrow -->
+    <button
+        id="next"
+        class="absolute top-1/2 right-4 transform -translate-y-1/2 w-16 h-16 bg-gray-700 text-white flex items-center
+            justify-center rounded-full shadow-lg hover:bg-gray-800">
+        ❯
+    </button>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.getElementById("slider");
+        const panels = slider.children.length;
+        let activePanel = 0;
+        document.getElementById("next").addEventListener("click", () => {
+            activePanel = (activePanel + 1) % panels;
+            updateSlider();
+        });
+        document.getElementById("prev").addEventListener("click", () => {
+            activePanel = (activePanel - 1 + panels) % panels;
+            updateSlider();
+        });
+        function updateSlider() {
+            slider.style.transform = `translateX(-${
+                activePanel * 100
+            }%)`;
+        }
+    });
+</script>
