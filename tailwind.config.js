@@ -3,7 +3,11 @@ module.exports = {
         './src/**/*.{html,md,njk}',
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                mono: ['Courier New', 'Courier', 'Lucida Console', 'monospace'],
+            },
+        },
     },
     plugins: [],
 }
