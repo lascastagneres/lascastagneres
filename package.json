@@ -9,7 +9,9 @@
     "dev:11ty": "eleventy --serve --port=3000",
     "dev:css": "npx @tailwindcss/cli -i src/assets/styles/tailwind.css -o docs/assets/styles/tailwind.css --watch --postcss",
     "build:11ty": "eleventy",
-    "build:css": "npx @tailwindcss/cli -i src/assets/styles/tailwind.css -o docs/assets/styles/tailwind.css --postcss"
+    "build:css": "npx @tailwindcss/cli -i src/assets/styles/tailwind.css -o docs/assets/styles/tailwind.css --postcss",
+    "deploy": "git add . && git commit -m 'commit' && git push",
+    "buildeploy": "run-s build:* && git add . && git commit -m 'commit' && git push"
   },
   "keywords": [],
   "author": "",
