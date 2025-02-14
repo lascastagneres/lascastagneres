@@ -13,17 +13,17 @@ module.exports = function (eleventyConfig) {
         if (!activity || !activity.label || !activity.price) return "";
 
         const labelStr = String(activity.label);
-        const priceStr = String(activity.price);
+        const timeStr = String(activity.time);
 
         // Approximate widths: Use a factor to account for non-monospace fonts
         const labelWidth = labelStr.length * 1.1; // Adjust factor as needed
-        const priceWidth = priceStr.length * 1.1;
+        const priceWidth = timeStr.length * 1.1;
         const availableWidth = totalWidth - (labelWidth + priceWidth);
 
         const dotsCount = availableWidth > 0 ? Math.floor(availableWidth / 1.1) : 1;
         const dots = "•".repeat(dotsCount); // Using "•" for better alignment
 
-        return `${labelStr} ${dots} ${priceStr}`;
+        return `${labelStr} ${dots} ${timeStr}`;
     });
 
 

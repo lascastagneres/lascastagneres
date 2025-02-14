@@ -6,31 +6,31 @@
     "fr": [
         {
             "type": "ACTIVITES DEDANS",
-            "label": "Fabriquer mon kombucha (2h)",
+            "label": "Fabriquer mon kombucha",
             "time": "2h",
             "price": "30€"
         },
         {
             "type": "ACTIVITES DEDANS",
-            "label": "Apprendre à jouer de l'accordeon (1h)",
+            "label": "Apprendre à jouer de l'accordeon",
             "time": "1h",
             "price": "30€"
         },
         {
             "type": "ACTIVITES DEHORS",
-            "label": "Faire une ballade en calèche (2h)",
+            "label": "Faire une ballade en calèche",
             "time": "2h",
             "price": "100€"
         },
         {
             "type": "ACTIVITES DEHORS",
-            "label": "Apprendre à dresser des chevaux (2h)",
+            "label": "Apprendre à dresser des chevaux",
             "time": "2h",
             "price": "40€"
         },
         {
             "type": "ACTIVITES DEHORS",
-            "label": "Skier dans la station de Peyragudes (1j)",
+            "label": "Skier dans la station de Peyragudes",
             "time": "1j",
             "price": "150€"
         }

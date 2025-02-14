@@ -1,0 +1,9 @@
+{% macro menuLine(name, activity, value=1, min=1, max=100, step=1) %}
+    <div class="menuline flex items-center font-mono">
+        <span
+            type="button"
+            class="w-8 h-8 flex items-center justify-center text-lg mr-4 cursor-pointer"
+            onclick="updateValue('{{ name }}', {{ step }}, {{ min }}, {{ max }})">{{ ['💡', '⚙️','🦛','🧨'] | random }}</span>
+        <p>{{ activity | formatActivity(50) }}</p>
+        <input type="number" id="{{ name }}" name="{{ name }}" value="{{ value }}" min="{{ min }}" max="{{ max }}" step="{{ step }}" class="w-16 text-center border-none outline-none rounded ml-4 cursor-pointer"></div>
+    {% endmacro %}
