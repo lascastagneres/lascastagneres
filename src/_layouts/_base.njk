@@ -7,13 +7,17 @@
         <link rel="stylesheet" href="{{ '/assets/styles/globals.css' | url }}">
         <title>{{ page.i18n['homepage.title'] }}</title>
     </head>
-    <body class="min-h-screen flex flex-col font-sans text-black">
+    <body class="min-h-screen flex flex-col font-sans text-black text-xs md:text-sm lg:text-base ">
         <header class="h-[10vh] flex justify-between items-center border-b-2 border-black p-4">
             <div>
                 <div>
-                    <a href="{{ '/' | url }}" class="text-4xl font-bold">{{ page.i18n['header.brand'] }}</a>
+                    <a href="{{ '/' | url }}" class="text-lg md:text-2xl lg:text-4xl font-bold">
+                        {{ page.i18n['header.brand'] }}
+                    </a>
                 </div>
-                <div class="text-2m font-bold">{{ page.i18n['header.slogan'] }}</div>
+                <div class="font-bold">
+                    {{ page.i18n['header.slogan'] }}
+                </div>
             </div>
             {% include "language-switcher.njk" %}
         </header>

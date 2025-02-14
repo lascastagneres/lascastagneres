@@ -7,13 +7,17 @@
         <link rel="stylesheet" href="/lascastagneres/assets/styles/globals.css">
         <title></title>
     </head>
-    <body class="min-h-screen flex flex-col font-sans text-black">
+    <body class="min-h-screen flex flex-col font-sans text-black text-xs md:text-sm lg:text-base ">
         <header class="h-[10vh] flex justify-between items-center border-b-2 border-black p-4">
             <div>
                 <div>
-                    <a href="/lascastagneres/" class="text-4xl font-bold"></a>
+                    <a href="/lascastagneres/" class="text-lg md:text-2xl lg:text-4xl font-bold">
+                        
+                    </a>
                 </div>
-                <div class="text-2m font-bold"></div>
+                <div class="font-bold">
+                    
+                </div>
             </div>
             <div class="relative">
     <button
@@ -59,7 +63,8 @@
     <div
         id="slider" class="flex flex-nowrap transition-transform duration-500 ease-in-out w-full h-full">
         <!-- Panel 1 -->
-        <div class="w-full h-[80vh] flex-shrink-0 flex flex-col items-center justify-center text-black">
+        <div class="w-full h-[80vh] flex-shrink-0 flex flex-col items-center justify-center text-black overflow-y-auto
+                custom-scrollbar">
             <div class="container mx-auto p-4 w-fit">
                 <div id="activities" name="activities" class="flex flex-col items-center justify-left">
                     
@@ -78,7 +83,7 @@
         <span
             type="button"
             class="w-8 h-8 flex items-center justify-center text-lg mr-4 cursor-pointer"
-            onclick="updateValue('act2', 1, 0, 100)">🦛</span>
+            onclick="updateValue('act2', 1, 0, 100)">💡</span>
         <p></p>
         <input type="number" id="act2" name="act2" value="0" min="0" max="100" step="1" class="w-16 text-center border-none outline-none rounded ml-4 cursor-pointer"></div>
     
@@ -93,7 +98,7 @@
                         placeholder="(*) Insérer ici de l'amour! (et oui c'est obligatoire, cf. l'astérisque!)"
                         class="w-[300px] border rounded"></textarea>
                 </div>
-                <button onclick="sendEmail()" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded cursor-pointer">Contactez nous</button>
+                <button onclick="sendEmail()" class="mt-4 bg-black text-white px-4 py-2 rounded cursor-pointer">Contactez nous</button>
             </div>
             <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
             <script>
@@ -143,21 +148,21 @@
             </script>
         </div>
         <!-- Panel 2 -->
-        <div class="w-full h-[80vh] flex-shrink-0 flex items-center justify-center text-black">Panel 2</div>
+        <div class="w-full h-[80vh] flex-shrink-0 flex items-center justify-center text-black overflow-y-auto">Panel 2</div>
         <!-- Panel 3 -->
-        <div class="w-full h-[80vh] flex-shrink-0 flex items-center justify-center text-black">Panel 3</div>
+        <div class="w-full h-[80vh] flex-shrink-0 flex items-center justify-center text-black overflow-y-auto">Panel 3</div>
     </div>
     <!-- Left Arrow -->
     <button
         id="prev"
-        class="absolute top-1/2 left-4 transform -translate-y-1/2 w-16 h-16 bg-gray-700 text-white flex items-center
-            justify-center rounded-full shadow-lg hover:bg-gray-800 cursor-pointer">
+        class="absolute top-1/2 left-4 transform -translate-y-1/2 w-16 h-16 bg-black text-white flex items-center justify-center
+            rounded-full shadow-lg cursor-pointer">
         ❮</button>
     <!-- Right Arrow -->
     <button
         id="next"
-        class="absolute top-1/2 right-4 transform -translate-y-1/2 w-16 h-16 bg-gray-700 text-white flex items-center
-            justify-center rounded-full shadow-lg hover:bg-gray-800 cursor-pointer">
+        class="absolute top-1/2 right-4 transform -translate-y-1/2 w-16 h-16 bg-black text-white flex items-center justify-center
+            rounded-full shadow-lg cursor-pointer">
         ❯</button>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
