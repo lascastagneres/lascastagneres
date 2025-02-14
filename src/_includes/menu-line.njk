@@ -4,6 +4,6 @@
             type="button"
             class="w-8 h-8 flex items-center justify-center text-lg mr-4 cursor-pointer"
             onclick="updateValue('{{ name }}', {{ step }}, {{ min }}, {{ max }})">{{ ['💡', '⚙️','🦛','🧨'] | random }}</span>
-        <p>{{ activity | formatActivity(50) }}</p>
+        <p>{{ activity | formatActivity(80) }}</p>
         <input type="number" id="{{ name }}" name="{{ name }}" value="{{ value }}" min="{{ min }}" max="{{ max }}" step="{{ step }}" class="w-16 text-center border-none outline-none rounded ml-4 cursor-pointer"></div>
     {% endmacro %}

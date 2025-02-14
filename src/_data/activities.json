@@ -33,6 +33,54 @@
             "label": "Skier dans la station de Peyragudes",
             "time": "1j",
             "price": "150€"
+        },
+        {
+            "type": "ACTIVITES DEHORS",
+            "label": "Faire une randonnée avec les explications d'une ingénieure agronome",
+            "time": "1j",
+            "price": "50€"
+        },
+        {
+            "type": "ACTIVITES DEHORS",
+            "label": "Apprendre la gyroroue",
+            "time": "2h",
+            "price": "50€"
+        },
+        {
+            "type": "ACTIVITES DEHORS",
+            "label": "Conduire un tracteur",
+            "time": "1h",
+            "price": "20€"
+        },
+        {
+            "type": "ACTIVITES DEHORS",
+            "label": "Faire du kayak sur la Neste",
+            "time": "4h",
+            "price": "100€"
+        },
+        {
+            "type": "ACTIVITES DEDANS",
+            "label": "Apprendre à fabriquer mon miel",
+            "time": "4h",
+            "price": "100€"
+        },
+        {
+            "type": "ACTIVITES DEDANS",
+            "label": "Apprendre à fabriquer mon fromage de chèvre",
+            "time": "4h",
+            "price": "100€"
+        },
+        {
+            "type": "ACTIVITES DEHORS",
+            "label": "Passer une demi-journée en compagnie d'un colombophile passionné",
+            "time": "4h",
+            "price": "50€"
+        },
+        {
+            "type": "ACTIVITES DEDANS",
+            "label": "Faire du yoga",
+            "time": "2h",
+            "price": "30€"
         }
     ]
 }

@@ -15,6 +15,22 @@ module.exports = function (eleventyConfig) {
         const labelStr = String(activity.label);
         const timeStr = String(activity.time);
 
+        if (labelStr.length > 30) {
+            var words = labelStr.split(' ');
+            var formattedText = '';
+            var lineLength = 0;
+
+            for (var i = 0; i < words.length; i++) {
+                if (lineLength + words[i].length > 30) {
+                    formattedText += '\n';
+                    lineLength = 0;
+                }
+                formattedText += words[i] + ' ';
+                lineLength += words[i].length + 1;
+            }
+
+        }
+
         // Approximate widths: Use a factor to account for non-monospace fonts
         const labelWidth = labelStr.length * 1.1; // Adjust factor as needed
         const priceWidth = timeStr.length * 1.1;
