@@ -13,9 +13,13 @@
                     {% endfor %}
                 </div>
                 <div id="contact" class="flex flex-col space-y-2 mt-4">
-                    <input id="fullName" type="text" placeholder="Sophie Fonfek" class="w-[300px] border rounded"/>
-                    <input id="telephone" type="text" placeholder="+33678543243" class="w-[300px] border rounded"/>
-                    <input id="mail" type="text" placeholder="sophie.fonfek@gmail.com" class="w-[300px] border rounded"/>
+                    <input id="fullName" type="text" placeholder="(*) Sophie Fonfek" class="w-[300px] border rounded"/>
+                    <input id="telephone" type="text" placeholder="(*) +33678543243" class="w-[300px] border rounded"/>
+                    <input id="mail" type="text" placeholder="(*) sophie.fonfek@gmail.com" class="w-[300px] border rounded"/>
+                    <textarea
+                        id="message"
+                        placeholder="(*) Insérer ici de l'amour! (et oui c'est obligatoire, cf. l'astérisque!)"
+                        class="w-[300px] border rounded"></textarea>
                 </div>
                 <button onclick="sendEmail()" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded cursor-pointer">Contactez nous</button>
             </div>

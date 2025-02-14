@@ -3,9 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link
-        rel="stylesheet" href="/lascastagneres/assets/styles/tailwind.css">
-        
+        <link rel="stylesheet" href="/lascastagneres/assets/styles/tailwind.css">
+        <link rel="stylesheet" href="/lascastagneres/assets/styles/globals.css">
         <title>Las Castagnères - Bienvenue à la ferme!</title>
     </head>
     <body class="min-h-screen flex flex-col font-sans text-black">
@@ -69,7 +68,7 @@
         <span
             type="button"
             class="w-8 h-8 flex items-center justify-center text-lg mr-4 cursor-pointer"
-            onclick="updateValue('act1', 1, 0, 100)">🦛</span>
+            onclick="updateValue('act1', 1, 0, 100)">💡</span>
         <p>Fabriquer mon kombucha ••••••••••••••••••••• 2h</p>
         <input type="number" id="act1" name="act1" value="0" min="0" max="100" step="1" class="w-16 text-center border-none outline-none rounded ml-4 cursor-pointer"></div>
     
@@ -99,7 +98,7 @@
         <span
             type="button"
             class="w-8 h-8 flex items-center justify-center text-lg mr-4 cursor-pointer"
-            onclick="updateValue('act4', 1, 0, 100)">🧨</span>
+            onclick="updateValue('act4', 1, 0, 100)">🦛</span>
         <p>Apprendre à dresser des chevaux •••••••••••• 2h</p>
         <input type="number" id="act4" name="act4" value="0" min="0" max="100" step="1" class="w-16 text-center border-none outline-none rounded ml-4 cursor-pointer"></div>
     
@@ -109,16 +108,20 @@
         <span
             type="button"
             class="w-8 h-8 flex items-center justify-center text-lg mr-4 cursor-pointer"
-            onclick="updateValue('act5', 1, 0, 100)">💡</span>
+            onclick="updateValue('act5', 1, 0, 100)">🦛</span>
         <p>Skier dans la station de Peyragudes •••••••• 1j</p>
         <input type="number" id="act5" name="act5" value="0" min="0" max="100" step="1" class="w-16 text-center border-none outline-none rounded ml-4 cursor-pointer"></div>
     
                     
                 </div>
                 <div id="contact" class="flex flex-col space-y-2 mt-4">
-                    <input id="fullName" type="text" placeholder="Sophie Fonfek" class="w-[300px] border rounded"/>
-                    <input id="telephone" type="text" placeholder="+33678543243" class="w-[300px] border rounded"/>
-                    <input id="mail" type="text" placeholder="sophie.fonfek@gmail.com" class="w-[300px] border rounded"/>
+                    <input id="fullName" type="text" placeholder="(*) Sophie Fonfek" class="w-[300px] border rounded"/>
+                    <input id="telephone" type="text" placeholder="(*) +33678543243" class="w-[300px] border rounded"/>
+                    <input id="mail" type="text" placeholder="(*) sophie.fonfek@gmail.com" class="w-[300px] border rounded"/>
+                    <textarea
+                        id="message"
+                        placeholder="(*) Insérer ici de l'amour! (et oui c'est obligatoire, cf. l'astérisque!)"
+                        class="w-[300px] border rounded"></textarea>
                 </div>
                 <button onclick="sendEmail()" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded cursor-pointer">Contactez nous</button>
             </div>
